@@ -15,7 +15,7 @@ This repository provides a LaTeX template for creating a professional Curriculum
 
 - `gibbons_cv.tex` — Main LaTeX file for your CV.
 - `res.cls` — The resume document class (core template).
-- `tex/` — Directory containing modular section files (e.g., `education.tex`, `positions.tex`).
+- `tex/` — Directory containing modular section files (e.g., `education.tex`, `positions.tex`).`
 - `additional/` — Optional extra content (e.g., grants, presentations, certifications).
 - `Makefile` — For building the PDF (optional, if you use `make`).
 - `myIEEEtran.bst` — Custom bibliography style (if needed for publications).
