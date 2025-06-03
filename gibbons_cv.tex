@@ -1,0 +1,105 @@
+\DocumentMetadata{
+  lang=en,
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  testphase=phase-II,
+}
+
+\documentclass[margin,line,pifont]{res}
+
+\usepackage{pifont}
+\usepackage[latin1] {inputenc}
+\usepackage{multibbl}
+\usepackage[pdfusetitle]{hyperref}
+
+% PDF metadata for accessibility
+\hypersetup{
+  pdftitle={firstlast_cv},
+  pdfauthor={first middle last},
+  pdfsubject={Curriculum Vitae},
+  pdfkeywords={CV, Resume, first middle last},
+  pdfdisplaydoctitle=true
+}
+
+% Set US Letter paper size and margins using geometry package
+% \usepackage[letterpaper,margin=1in]{geometry}
+
+%\itemsep=0in
+%\parsep=0in
+\usepackage{fancyhdr}
+\topmargin=-0.25in
+\textheight=9.5in
+
+\oddsidemargin=-0.5in %-0.25in
+\evensidemargin=-0.5in %-0.25in
+
+\textwidth=6in
+
+
+\typeout{resumewidth=\the\resumewidth}
+\typeout{textwidth=\the\textwidth}
+\typeout{hoffset=\the\hoffset}
+\typeout{hsize=\the\hsize}
+
+
+
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+%\cfoot{\thepage}
+%\lfoot{\textit{\footnotesize Research Statement}}
+\rfoot{{\footnotesize Curriculum Vitae, Eric Gibbons, \thepage}}
+
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+
+
+\begin{document}
+
+\name{Eric Gibbons\vspace*{.1in}}
+\title{eric_gibbons_cv}
+\begin{resume}
+
+  \section{\sc Contact Information}
+
+  %
+  \vspace{.05in}
+  % \newlength{\rightColumnLength}\setlength{\rightColumnLength}{2.5in}%
+  % %
+  % \begin{tabular}[t]{@{}p{\textwidth-\rightColumnLength}p{\rightColumnLength}}
+  %   % 
+  %   Department of Electrical and Computer Engineering & \textit{WWW:} faculty.weber.edu/ericgibbons \\
+  %   Weber State University                            & \textit{Phone:} (801) 626-6898              \\
+  %   1447 Edvalson St. Dept. 1803                      & \textit{E-mail:} ericgibbons@weber.edu      \\
+  %   Ogden, Utah 84408                                 &                                             \\
+  % \end{tabular}
+  \begin{tabular}{@{}p{3.5in}p{2.5in}}
+    Department of Electrical and Computer Engineering & \href{mailto:ericgibbons@weber.edu}{ericgibbons@weber.edu} \\
+    1447 Edvalson St. Dept. 1803                      & (801) 626-6898                                             \\
+    Ogden, Utah 84408                                 & \url{faculty.weber.edu/ericgibbons}                        \\
+  \end{tabular}
+
+  \input{./tex/research_interest.tex}
+  \input{./tex/education.tex}
+  \input{./tex/positions.tex}
+  \input{./tex/awards.tex}
+  \input{./tex/publications.tex}
+  \input{./tex/teaching.tex}
+  \input{./tex/other.tex}
+
+
+\end{resume}
+\end{document}
